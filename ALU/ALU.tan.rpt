@@ -1,0 +1,231 @@
+Classic Timing Analyzer report for ALU
+Sun Dec 24 21:22:08 2023
+Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Timing Analyzer Settings
+  4. Clock Settings Summary
+  5. Parallel Compilation
+  6. tsu
+  7. tco
+  8. th
+  9. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                                                                                                                                                                         ;
++------------------------------+-------+---------------+-------------+-------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------+------------+-----------+--------------+
+; Type                         ; Slack ; Required Time ; Actual Time ; From                                                                                ; To                                                                                                           ; From Clock ; To Clock  ; Failed Paths ;
++------------------------------+-------+---------------+-------------+-------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------+------------+-----------+--------------+
+; Worst-case tsu               ; N/A   ; None          ; 3.682 ns    ; Address[2]                                                                          ; lpm_rom2:inst|altsyncram:altsyncram_component|altsyncram_l651:auto_generated|ram_block1a0~porta_address_reg2 ; --         ; Cloclk_in ; 0            ;
+; Worst-case tco               ; N/A   ; None          ; 8.170 ns    ; lpm_rom2:inst|altsyncram:altsyncram_component|altsyncram_l651:auto_generated|q_a[5] ; Addr[4]                                                                                                      ; Cloclk_out ; --        ; 0            ;
+; Worst-case th                ; N/A   ; None          ; -2.389 ns   ; Address[4]                                                                          ; lpm_rom2:inst|altsyncram:altsyncram_component|altsyncram_l651:auto_generated|ram_block1a0~porta_address_reg4 ; --         ; Cloclk_in ; 0            ;
+; Total number of failed paths ;       ;               ;             ;                                                                                     ;                                                                                                              ;            ;           ; 0            ;
++------------------------------+-------+---------------+-------------+-------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------+------------+-----------+--------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Settings                                                                                                                            ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+; Option                                                                                               ; Setting            ; From ; To ; Entity Name ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+; Device Name                                                                                          ; EP2S15F484C3       ;      ;    ;             ;
+; Timing Models                                                                                        ; Final              ;      ;    ;             ;
+; Default hold multicycle                                                                              ; Same as Multicycle ;      ;    ;             ;
+; Cut paths between unrelated clock domains                                                            ; On                 ;      ;    ;             ;
+; Cut off read during write signal paths                                                               ; On                 ;      ;    ;             ;
+; Cut off feedback from I/O pins                                                                       ; On                 ;      ;    ;             ;
+; Report Combined Fast/Slow Timing                                                                     ; Off                ;      ;    ;             ;
+; Ignore Clock Settings                                                                                ; Off                ;      ;    ;             ;
+; Analyze latches as synchronous elements                                                              ; On                 ;      ;    ;             ;
+; Enable Recovery/Removal analysis                                                                     ; Off                ;      ;    ;             ;
+; Enable Clock Latency                                                                                 ; Off                ;      ;    ;             ;
+; Use TimeQuest Timing Analyzer                                                                        ; Off                ;      ;    ;             ;
+; Number of source nodes to report per destination node                                                ; 10                 ;      ;    ;             ;
+; Number of destination nodes to report                                                                ; 10                 ;      ;    ;             ;
+; Number of paths to report                                                                            ; 200                ;      ;    ;             ;
+; Report Minimum Timing Checks                                                                         ; Off                ;      ;    ;             ;
+; Use Fast Timing Models                                                                               ; Off                ;      ;    ;             ;
+; Report IO Paths Separately                                                                           ; Off                ;      ;    ;             ;
+; Perform Multicorner Analysis                                                                         ; On                 ;      ;    ;             ;
+; Reports the worst-case path for each clock domain and analysis                                       ; Off                ;      ;    ;             ;
+; Reports worst-case timing paths for each clock domain and analysis                                   ; Off                ;      ;    ;             ;
+; Specifies the maximum number of worst-case timing paths to report for each clock domain and analysis ; 100                ;      ;    ;             ;
+; Removes common clock path pessimism (CCPP) during slack computation                                  ; Off                ;      ;    ;             ;
+; Output I/O Timing Endpoint                                                                           ; Near End           ;      ;    ;             ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Settings Summary                                                                                                                                                             ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock Node Name ; Clock Setting Name ; Type     ; Fmax Requirement ; Early Latency ; Late Latency ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ; Phase offset ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Cloclk_out      ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
+; Cloclk_in       ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 16     ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; tsu                                                                                                                                                                       ;
++-------+--------------+------------+------------+--------------------------------------------------------------------------------------------------------------+-----------+
+; Slack ; Required tsu ; Actual tsu ; From       ; To                                                                                                           ; To Clock  ;
++-------+--------------+------------+------------+--------------------------------------------------------------------------------------------------------------+-----------+
+; N/A   ; None         ; 3.682 ns   ; Address[2] ; lpm_rom2:inst|altsyncram:altsyncram_component|altsyncram_l651:auto_generated|ram_block1a0~porta_address_reg2 ; Cloclk_in ;
+; N/A   ; None         ; 3.624 ns   ; Address[1] ; lpm_rom2:inst|altsyncram:altsyncram_component|altsyncram_l651:auto_generated|ram_block1a0~porta_address_reg1 ; Cloclk_in ;
+; N/A   ; None         ; 3.444 ns   ; Address[5] ; lpm_rom2:inst|altsyncram:altsyncram_component|altsyncram_l651:auto_generated|ram_block1a0~porta_address_reg5 ; Cloclk_in ;
+; N/A   ; None         ; 3.371 ns   ; Address[0] ; lpm_rom2:inst|altsyncram:altsyncram_component|altsyncram_l651:auto_generated|ram_block1a0~porta_address_reg0 ; Cloclk_in ;
+; N/A   ; None         ; 3.276 ns   ; Address[3] ; lpm_rom2:inst|altsyncram:altsyncram_component|altsyncram_l651:auto_generated|ram_block1a0~porta_address_reg3 ; Cloclk_in ;
+; N/A   ; None         ; 2.614 ns   ; Address[4] ; lpm_rom2:inst|altsyncram:altsyncram_component|altsyncram_l651:auto_generated|ram_block1a0~porta_address_reg4 ; Cloclk_in ;
++-------+--------------+------------+------------+--------------------------------------------------------------------------------------------------------------+-----------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; tco                                                                                                                                              ;
++-------+--------------+------------+--------------------------------------------------------------------------------------+----------+------------+
+; Slack ; Required tco ; Actual tco ; From                                                                                 ; To       ; From Clock ;
++-------+--------------+------------+--------------------------------------------------------------------------------------+----------+------------+
+; N/A   ; None         ; 8.170 ns   ; lpm_rom2:inst|altsyncram:altsyncram_component|altsyncram_l651:auto_generated|q_a[5]  ; Addr[4]  ; Cloclk_out ;
+; N/A   ; None         ; 7.594 ns   ; lpm_rom2:inst|altsyncram:altsyncram_component|altsyncram_l651:auto_generated|q_a[15] ; PC       ; Cloclk_out ;
+; N/A   ; None         ; 6.948 ns   ; lpm_rom2:inst|altsyncram:altsyncram_component|altsyncram_l651:auto_generated|q_a[28] ; A[0]     ; Cloclk_out ;
+; N/A   ; None         ; 6.855 ns   ; lpm_rom2:inst|altsyncram:altsyncram_component|altsyncram_l651:auto_generated|q_a[8]  ; ACode[1] ; Cloclk_out ;
+; N/A   ; None         ; 6.275 ns   ; lpm_rom2:inst|altsyncram:altsyncram_component|altsyncram_l651:auto_generated|q_a[10] ; RD       ; Cloclk_out ;
+; N/A   ; None         ; 5.979 ns   ; lpm_rom2:inst|altsyncram:altsyncram_component|altsyncram_l651:auto_generated|q_a[27] ; Amux     ; Cloclk_out ;
+; N/A   ; None         ; 5.921 ns   ; lpm_rom2:inst|altsyncram:altsyncram_component|altsyncram_l651:auto_generated|q_a[6]  ; Addr[5]  ; Cloclk_out ;
+; N/A   ; None         ; 5.889 ns   ; lpm_rom2:inst|altsyncram:altsyncram_component|altsyncram_l651:auto_generated|q_a[25] ; B[2]     ; Cloclk_out ;
+; N/A   ; None         ; 5.746 ns   ; lpm_rom2:inst|altsyncram:altsyncram_component|altsyncram_l651:auto_generated|q_a[14] ; ALU[2]   ; Cloclk_out ;
+; N/A   ; None         ; 5.717 ns   ; lpm_rom2:inst|altsyncram:altsyncram_component|altsyncram_l651:auto_generated|q_a[13] ; ALU[1]   ; Cloclk_out ;
+; N/A   ; None         ; 5.706 ns   ; lpm_rom2:inst|altsyncram:altsyncram_component|altsyncram_l651:auto_generated|q_a[18] ; C[1]     ; Cloclk_out ;
+; N/A   ; None         ; 5.691 ns   ; lpm_rom2:inst|altsyncram:altsyncram_component|altsyncram_l651:auto_generated|q_a[19] ; C[2]     ; Cloclk_out ;
+; N/A   ; None         ; 5.665 ns   ; lpm_rom2:inst|altsyncram:altsyncram_component|altsyncram_l651:auto_generated|q_a[11] ; WR       ; Cloclk_out ;
+; N/A   ; None         ; 5.618 ns   ; lpm_rom2:inst|altsyncram:altsyncram_component|altsyncram_l651:auto_generated|q_a[1]  ; Addr[0]  ; Cloclk_out ;
+; N/A   ; None         ; 5.603 ns   ; lpm_rom2:inst|altsyncram:altsyncram_component|altsyncram_l651:auto_generated|q_a[29] ; A[1]     ; Cloclk_out ;
+; N/A   ; None         ; 5.587 ns   ; lpm_rom2:inst|altsyncram:altsyncram_component|altsyncram_l651:auto_generated|q_a[9]  ; ACode[2] ; Cloclk_out ;
+; N/A   ; None         ; 5.559 ns   ; lpm_rom2:inst|altsyncram:altsyncram_component|altsyncram_l651:auto_generated|q_a[2]  ; Addr[1]  ; Cloclk_out ;
+; N/A   ; None         ; 5.544 ns   ; lpm_rom2:inst|altsyncram:altsyncram_component|altsyncram_l651:auto_generated|q_a[22] ; Bmux[1]  ; Cloclk_out ;
+; N/A   ; None         ; 5.537 ns   ; lpm_rom2:inst|altsyncram:altsyncram_component|altsyncram_l651:auto_generated|q_a[17] ; C[0]     ; Cloclk_out ;
+; N/A   ; None         ; 5.535 ns   ; lpm_rom2:inst|altsyncram:altsyncram_component|altsyncram_l651:auto_generated|q_a[7]  ; ACode[0] ; Cloclk_out ;
+; N/A   ; None         ; 5.483 ns   ; lpm_rom2:inst|altsyncram:altsyncram_component|altsyncram_l651:auto_generated|q_a[20] ; C[3]     ; Cloclk_out ;
+; N/A   ; None         ; 5.420 ns   ; lpm_rom2:inst|altsyncram:altsyncram_component|altsyncram_l651:auto_generated|q_a[3]  ; Addr[2]  ; Cloclk_out ;
+; N/A   ; None         ; 5.363 ns   ; lpm_rom2:inst|altsyncram:altsyncram_component|altsyncram_l651:auto_generated|q_a[0]  ; F        ; Cloclk_out ;
+; N/A   ; None         ; 5.280 ns   ; lpm_rom2:inst|altsyncram:altsyncram_component|altsyncram_l651:auto_generated|q_a[24] ; B[1]     ; Cloclk_out ;
+; N/A   ; None         ; 5.279 ns   ; lpm_rom2:inst|altsyncram:altsyncram_component|altsyncram_l651:auto_generated|q_a[16] ; Cmux     ; Cloclk_out ;
+; N/A   ; None         ; 5.211 ns   ; lpm_rom2:inst|altsyncram:altsyncram_component|altsyncram_l651:auto_generated|q_a[4]  ; Addr[3]  ; Cloclk_out ;
+; N/A   ; None         ; 5.105 ns   ; lpm_rom2:inst|altsyncram:altsyncram_component|altsyncram_l651:auto_generated|q_a[23] ; B[0]     ; Cloclk_out ;
+; N/A   ; None         ; 5.086 ns   ; lpm_rom2:inst|altsyncram:altsyncram_component|altsyncram_l651:auto_generated|q_a[21] ; Bmux[0]  ; Cloclk_out ;
+; N/A   ; None         ; 5.074 ns   ; lpm_rom2:inst|altsyncram:altsyncram_component|altsyncram_l651:auto_generated|q_a[26] ; B[3]     ; Cloclk_out ;
+; N/A   ; None         ; 5.062 ns   ; lpm_rom2:inst|altsyncram:altsyncram_component|altsyncram_l651:auto_generated|q_a[12] ; ALU[0]   ; Cloclk_out ;
+; N/A   ; None         ; 5.045 ns   ; lpm_rom2:inst|altsyncram:altsyncram_component|altsyncram_l651:auto_generated|q_a[31] ; A[3]     ; Cloclk_out ;
+; N/A   ; None         ; 5.031 ns   ; lpm_rom2:inst|altsyncram:altsyncram_component|altsyncram_l651:auto_generated|q_a[30] ; A[2]     ; Cloclk_out ;
++-------+--------------+------------+--------------------------------------------------------------------------------------+----------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; th                                                                                                                                                                              ;
++---------------+-------------+-----------+------------+--------------------------------------------------------------------------------------------------------------+-----------+
+; Minimum Slack ; Required th ; Actual th ; From       ; To                                                                                                           ; To Clock  ;
++---------------+-------------+-----------+------------+--------------------------------------------------------------------------------------------------------------+-----------+
+; N/A           ; None        ; -2.389 ns ; Address[4] ; lpm_rom2:inst|altsyncram:altsyncram_component|altsyncram_l651:auto_generated|ram_block1a0~porta_address_reg4 ; Cloclk_in ;
+; N/A           ; None        ; -3.051 ns ; Address[3] ; lpm_rom2:inst|altsyncram:altsyncram_component|altsyncram_l651:auto_generated|ram_block1a0~porta_address_reg3 ; Cloclk_in ;
+; N/A           ; None        ; -3.146 ns ; Address[0] ; lpm_rom2:inst|altsyncram:altsyncram_component|altsyncram_l651:auto_generated|ram_block1a0~porta_address_reg0 ; Cloclk_in ;
+; N/A           ; None        ; -3.219 ns ; Address[5] ; lpm_rom2:inst|altsyncram:altsyncram_component|altsyncram_l651:auto_generated|ram_block1a0~porta_address_reg5 ; Cloclk_in ;
+; N/A           ; None        ; -3.399 ns ; Address[1] ; lpm_rom2:inst|altsyncram:altsyncram_component|altsyncram_l651:auto_generated|ram_block1a0~porta_address_reg1 ; Cloclk_in ;
+; N/A           ; None        ; -3.457 ns ; Address[2] ; lpm_rom2:inst|altsyncram:altsyncram_component|altsyncram_l651:auto_generated|ram_block1a0~porta_address_reg2 ; Cloclk_in ;
++---------------+-------------+-----------+------------+--------------------------------------------------------------------------------------------------------------+-----------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Classic Timing Analyzer
+    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+    Info: Processing started: Sun Dec 24 21:22:07 2023
+Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off ALU -c ALU --timing_analysis_only
+Warning: Found pins functioning as undefined clocks and/or memory enables
+    Info: Assuming node "Cloclk_out" is an undefined clock
+    Info: Assuming node "Cloclk_in" is an undefined clock
+Info: No valid register-to-register data paths exist for clock "Cloclk_out"
+Info: No valid register-to-register data paths exist for clock "Cloclk_in"
+Info: tsu for memory "lpm_rom2:inst|altsyncram:altsyncram_component|altsyncram_l651:auto_generated|ram_block1a0~porta_address_reg2" (data pin = "Address[2]", clock pin = "Cloclk_in") is 3.682 ns
+    Info: + Longest pin to memory delay is 6.012 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.799 ns) = 0.799 ns; Loc. = PIN_D13; Fanout = 1; PIN Node = 'Address[2]'
+        Info: 2: + IC(5.110 ns) + CELL(0.103 ns) = 6.012 ns; Loc. = M4K_X32_Y4; Fanout = 32; MEM Node = 'lpm_rom2:inst|altsyncram:altsyncram_component|altsyncram_l651:auto_generated|ram_block1a0~porta_address_reg2'
+        Info: Total cell delay = 0.902 ns ( 15.00 % )
+        Info: Total interconnect delay = 5.110 ns ( 85.00 % )
+    Info: + Micro setup delay of destination is 0.022 ns
+    Info: - Shortest clock path from clock "Cloclk_in" to destination memory is 2.352 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.854 ns) = 0.854 ns; Loc. = PIN_N20; Fanout = 1; CLK Node = 'Cloclk_in'
+        Info: 2: + IC(0.343 ns) + CELL(0.000 ns) = 1.197 ns; Loc. = CLKCTRL_G3; Fanout = 6; COMB Node = 'Cloclk_in~clkctrl'
+        Info: 3: + IC(0.674 ns) + CELL(0.481 ns) = 2.352 ns; Loc. = M4K_X32_Y4; Fanout = 32; MEM Node = 'lpm_rom2:inst|altsyncram:altsyncram_component|altsyncram_l651:auto_generated|ram_block1a0~porta_address_reg2'
+        Info: Total cell delay = 1.335 ns ( 56.76 % )
+        Info: Total interconnect delay = 1.017 ns ( 43.24 % )
+Info: tco from clock "Cloclk_out" to destination pin "Addr[4]" through memory "lpm_rom2:inst|altsyncram:altsyncram_component|altsyncram_l651:auto_generated|q_a[5]" is 8.170 ns
+    Info: + Longest clock path from clock "Cloclk_out" to source memory is 2.353 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.864 ns) = 0.864 ns; Loc. = PIN_M21; Fanout = 1; CLK Node = 'Cloclk_out'
+        Info: 2: + IC(0.343 ns) + CELL(0.000 ns) = 1.207 ns; Loc. = CLKCTRL_G1; Fanout = 32; COMB Node = 'Cloclk_out~clkctrl'
+        Info: 3: + IC(0.674 ns) + CELL(0.472 ns) = 2.353 ns; Loc. = M4K_X32_Y4; Fanout = 1; MEM Node = 'lpm_rom2:inst|altsyncram:altsyncram_component|altsyncram_l651:auto_generated|q_a[5]'
+        Info: Total cell delay = 1.336 ns ( 56.78 % )
+        Info: Total interconnect delay = 1.017 ns ( 43.22 % )
+    Info: + Micro clock to output delay of source is 0.136 ns
+    Info: + Longest memory to pin delay is 5.681 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.051 ns) = 0.051 ns; Loc. = M4K_X32_Y4; Fanout = 1; MEM Node = 'lpm_rom2:inst|altsyncram:altsyncram_component|altsyncram_l651:auto_generated|q_a[5]'
+        Info: 2: + IC(3.486 ns) + CELL(2.144 ns) = 5.681 ns; Loc. = PIN_F19; Fanout = 0; PIN Node = 'Addr[4]'
+        Info: Total cell delay = 2.195 ns ( 38.64 % )
+        Info: Total interconnect delay = 3.486 ns ( 61.36 % )
+Info: th for memory "lpm_rom2:inst|altsyncram:altsyncram_component|altsyncram_l651:auto_generated|ram_block1a0~porta_address_reg4" (data pin = "Address[4]", clock pin = "Cloclk_in") is -2.389 ns
+    Info: + Longest clock path from clock "Cloclk_in" to destination memory is 2.352 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.854 ns) = 0.854 ns; Loc. = PIN_N20; Fanout = 1; CLK Node = 'Cloclk_in'
+        Info: 2: + IC(0.343 ns) + CELL(0.000 ns) = 1.197 ns; Loc. = CLKCTRL_G3; Fanout = 6; COMB Node = 'Cloclk_in~clkctrl'
+        Info: 3: + IC(0.674 ns) + CELL(0.481 ns) = 2.352 ns; Loc. = M4K_X32_Y4; Fanout = 32; MEM Node = 'lpm_rom2:inst|altsyncram:altsyncram_component|altsyncram_l651:auto_generated|ram_block1a0~porta_address_reg4'
+        Info: Total cell delay = 1.335 ns ( 56.76 % )
+        Info: Total interconnect delay = 1.017 ns ( 43.24 % )
+    Info: + Micro hold delay of destination is 0.203 ns
+    Info: - Shortest pin to memory delay is 4.944 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.847 ns) = 0.847 ns; Loc. = PIN_Y8; Fanout = 1; PIN Node = 'Address[4]'
+        Info: 2: + IC(3.994 ns) + CELL(0.103 ns) = 4.944 ns; Loc. = M4K_X32_Y4; Fanout = 32; MEM Node = 'lpm_rom2:inst|altsyncram:altsyncram_component|altsyncram_l651:auto_generated|ram_block1a0~porta_address_reg4'
+        Info: Total cell delay = 0.950 ns ( 19.22 % )
+        Info: Total interconnect delay = 3.994 ns ( 80.78 % )
+Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 178 megabytes
+    Info: Processing ended: Sun Dec 24 21:22:08 2023
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:00
+
+

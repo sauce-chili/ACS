@@ -1,0 +1,67 @@
+GED
+
+	Undo Commands
+	     1.	Resize
+	     2.	Insert Node
+	     3.	Move
+	     4.	Move
+	     5.	Insert Node
+	     6.	Move
+	     7.	Move
+	     8.	Rotate 90
+	     9.	Flip Vertical
+	    10.	Flip Vertical
+	    11.	Flip Horizontal
+	    12.	Flip Horizontal
+	    13.	Insert Symbol
+	    14.	Move
+	    15.	Move
+	    16.	Move
+	    17.	Move
+	    18.	Insert Symbol
+	    19.	Move
+	    20.	Resize
+	    21.	Delete
+	    22.	Resize
+	    23.	Move
+	    24.	Resize
+	    25.	Move
+	    26.	Delete
+	    27.	Delete
+	    28.	Insert Symbol
+
+
+GED
+
+	Undo Commands
+	     1.	Insert Symbol
+	     2.	Move
+	     3.	Move
+	     4.	Properties
+	     5.	Properties
+	     6.	Properties
+	     7.	Properties
+	     8.	Insert Symbol
+	     9.	Move
+	    10.	Move
+	    11.	Move
+	    12.	Move
+	    13.	Move
+	    14.	Move
+	    15.	Properties
+	    16.	Insert Symbol
+	    17.	Properties
+	    18.	Properties
+	    19.	Move
+	    20.	Properties
+	    21.	Properties
+	    22.	Insert Symbol
+	    23.	Insert Symbol
+
+
+WED
+
+	Undo Commands
+	     1.	Change Time Bars
+
+

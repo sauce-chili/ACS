@@ -1,0 +1,204 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+*/
+(header "symbol" (version "1.1"))
+(symbol
+	(rect 16 16 296 400)
+	(text "CPU" (rect 5 0 28 14)(font "Arial" (font_size 8)))
+	(text "inst" (rect 8 368 25 380)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "clock_RAM" (rect 0 0 63 14)(font "Arial" (font_size 8)))
+		(text "clock_RAM" (rect 21 27 84 41)(font "Arial" (font_size 8)))
+		(line (pt 0 32)(pt 16 32)(line_width 1))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "Clock_SFA" (rect 0 0 62 14)(font "Arial" (font_size 8)))
+		(text "Clock_SFA" (rect 21 43 83 57)(font "Arial" (font_size 8)))
+		(line (pt 0 48)(pt 16 48)(line_width 1))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "Clock_rom" (rect 0 0 59 14)(font "Arial" (font_size 8)))
+		(text "Clock_rom" (rect 21 59 80 73)(font "Arial" (font_size 8)))
+		(line (pt 0 64)(pt 16 64)(line_width 1))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "Clock_OperationD" (rect 0 0 101 14)(font "Arial" (font_size 8)))
+		(text "Clock_OperationD" (rect 21 75 122 89)(font "Arial" (font_size 8)))
+		(line (pt 0 80)(pt 16 80)(line_width 1))
+	)
+	(port
+		(pt 280 32)
+		(output)
+		(text "OUT_FROM_RAM[7..0]" (rect 0 0 128 14)(font "Arial" (font_size 8)))
+		(text "OUT_FROM_RAM[7..0]" (rect 131 27 259 41)(font "Arial" (font_size 8)))
+		(line (pt 280 32)(pt 264 32)(line_width 3))
+	)
+	(port
+		(pt 280 48)
+		(output)
+		(text "RAM_DATA_OUT[7..0]" (rect 0 0 128 14)(font "Arial" (font_size 8)))
+		(text "RAM_DATA_OUT[7..0]" (rect 131 43 259 57)(font "Arial" (font_size 8)))
+		(line (pt 280 48)(pt 264 48)(line_width 3))
+	)
+	(port
+		(pt 280 64)
+		(output)
+		(text "RAM_ADR_OUT[7..0]" (rect 0 0 120 14)(font "Arial" (font_size 8)))
+		(text "RAM_ADR_OUT[7..0]" (rect 139 59 259 73)(font "Arial" (font_size 8)))
+		(line (pt 280 64)(pt 264 64)(line_width 3))
+	)
+	(port
+		(pt 280 80)
+		(output)
+		(text "CF" (rect 0 0 15 14)(font "Arial" (font_size 8)))
+		(text "CF" (rect 244 75 259 89)(font "Arial" (font_size 8)))
+		(line (pt 280 80)(pt 264 80)(line_width 1))
+	)
+	(port
+		(pt 280 96)
+		(output)
+		(text "IR0[7..0]" (rect 0 0 46 14)(font "Arial" (font_size 8)))
+		(text "IR0[7..0]" (rect 213 91 259 105)(font "Arial" (font_size 8)))
+		(line (pt 280 96)(pt 264 96)(line_width 3))
+	)
+	(port
+		(pt 280 112)
+		(output)
+		(text "IR1[7..0]" (rect 0 0 46 14)(font "Arial" (font_size 8)))
+		(text "IR1[7..0]" (rect 213 107 259 121)(font "Arial" (font_size 8)))
+		(line (pt 280 112)(pt 264 112)(line_width 3))
+	)
+	(port
+		(pt 280 128)
+		(output)
+		(text "R0[7..0]" (rect 0 0 43 14)(font "Arial" (font_size 8)))
+		(text "R0[7..0]" (rect 216 123 259 137)(font "Arial" (font_size 8)))
+		(line (pt 280 128)(pt 264 128)(line_width 3))
+	)
+	(port
+		(pt 280 144)
+		(output)
+		(text "R1[7..0]" (rect 0 0 43 14)(font "Arial" (font_size 8)))
+		(text "R1[7..0]" (rect 216 139 259 153)(font "Arial" (font_size 8)))
+		(line (pt 280 144)(pt 264 144)(line_width 3))
+	)
+	(port
+		(pt 280 160)
+		(output)
+		(text "R2[7..0]" (rect 0 0 43 14)(font "Arial" (font_size 8)))
+		(text "R2[7..0]" (rect 216 155 259 169)(font "Arial" (font_size 8)))
+		(line (pt 280 160)(pt 264 160)(line_width 3))
+	)
+	(port
+		(pt 280 176)
+		(output)
+		(text "R3[7..0]" (rect 0 0 43 14)(font "Arial" (font_size 8)))
+		(text "R3[7..0]" (rect 216 171 259 185)(font "Arial" (font_size 8)))
+		(line (pt 280 176)(pt 264 176)(line_width 3))
+	)
+	(port
+		(pt 280 192)
+		(output)
+		(text "fromPc[7..0]" (rect 0 0 68 14)(font "Arial" (font_size 8)))
+		(text "fromPc[7..0]" (rect 191 187 259 201)(font "Arial" (font_size 8)))
+		(line (pt 280 192)(pt 264 192)(line_width 3))
+	)
+	(port
+		(pt 280 208)
+		(output)
+		(text "Na[3..0]" (rect 0 0 43 14)(font "Arial" (font_size 8)))
+		(text "Na[3..0]" (rect 216 203 259 217)(font "Arial" (font_size 8)))
+		(line (pt 280 208)(pt 264 208)(line_width 3))
+	)
+	(port
+		(pt 280 224)
+		(output)
+		(text "Nb[3..0]" (rect 0 0 43 14)(font "Arial" (font_size 8)))
+		(text "Nb[3..0]" (rect 216 219 259 233)(font "Arial" (font_size 8)))
+		(line (pt 280 224)(pt 264 224)(line_width 3))
+	)
+	(port
+		(pt 280 240)
+		(output)
+		(text "Nc[3..0]" (rect 0 0 43 14)(font "Arial" (font_size 8)))
+		(text "Nc[3..0]" (rect 216 235 259 249)(font "Arial" (font_size 8)))
+		(line (pt 280 240)(pt 264 240)(line_width 3))
+	)
+	(port
+		(pt 280 256)
+		(output)
+		(text "adrType[1..0]" (rect 0 0 75 14)(font "Arial" (font_size 8)))
+		(text "adrType[1..0]" (rect 184 251 259 265)(font "Arial" (font_size 8)))
+		(line (pt 280 256)(pt 264 256)(line_width 3))
+	)
+	(port
+		(pt 280 272)
+		(output)
+		(text "Amux" (rect 0 0 33 14)(font "Arial" (font_size 8)))
+		(text "Amux" (rect 226 267 259 281)(font "Arial" (font_size 8)))
+		(line (pt 280 272)(pt 264 272)(line_width 1))
+	)
+	(port
+		(pt 280 288)
+		(output)
+		(text "PC" (rect 0 0 15 14)(font "Arial" (font_size 8)))
+		(text "PC" (rect 244 283 259 297)(font "Arial" (font_size 8)))
+		(line (pt 280 288)(pt 264 288)(line_width 1))
+	)
+	(port
+		(pt 280 304)
+		(output)
+		(text "Alu_Mode[2..0]" (rect 0 0 84 14)(font "Arial" (font_size 8)))
+		(text "Alu_Mode[2..0]" (rect 175 299 259 313)(font "Arial" (font_size 8)))
+		(line (pt 280 304)(pt 264 304)(line_width 3))
+	)
+	(port
+		(pt 280 320)
+		(output)
+		(text "WR" (rect 0 0 20 14)(font "Arial" (font_size 8)))
+		(text "WR" (rect 239 315 259 329)(font "Arial" (font_size 8)))
+		(line (pt 280 320)(pt 264 320)(line_width 1))
+	)
+	(port
+		(pt 280 336)
+		(output)
+		(text "RD" (rect 0 0 16 14)(font "Arial" (font_size 8)))
+		(text "RD" (rect 243 331 259 345)(font "Arial" (font_size 8)))
+		(line (pt 280 336)(pt 264 336)(line_width 1))
+	)
+	(port
+		(pt 280 352)
+		(output)
+		(text "F" (rect 0 0 7 14)(font "Arial" (font_size 8)))
+		(text "F" (rect 252 347 259 361)(font "Arial" (font_size 8)))
+		(line (pt 280 352)(pt 264 352)(line_width 1))
+	)
+	(drawing
+		(rectangle (rect 16 16 264 368)(line_width 1))
+	)
+)
